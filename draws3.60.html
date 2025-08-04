@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brighton vs Manchester City - Away Win - Tess Betting</title>
+    <title>Manchester City vs Chelsea - Draw Bet - Tess Betting</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -142,8 +142,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
-        .brighton-highlight {
-            background: linear-gradient(135deg, #0057b8, #ffcd00);
+        .draw-highlight {
+            background: linear-gradient(135deg, #6b7280, #9ca3af);
             color: white;
             border-radius: 8px;
             padding: 1rem;
@@ -168,33 +168,32 @@
             background: linear-gradient(135deg, #6cabdd, #1c2e5a);
         }
         
-        .brighton {
-            background: linear-gradient(135deg, #0057b8, #ffcd00);
+        .chelsea {
+            background: linear-gradient(135deg, #034694, #0e4b99);
         }
         
-        .underdog-stats {
-            background: linear-gradient(135deg, #dc2626, #ef4444);
+        .draw-stats {
+            background: linear-gradient(135deg, #f59e0b, #f97316);
             color: white;
             border-radius: 8px;
             padding: 1rem;
             text-align: center;
         }
         
-        .value-bet {
-            background: linear-gradient(135deg, #059669, #10b981);
-            color: white;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        .underdog-badge {
-            background-color: var(--danger);
+        .rivalry-badge {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
             color: white;
             border-radius: 15px;
             padding: 0.25rem 0.75rem;
             font-size: 0.8rem;
             font-weight: bold;
+        }
+        
+        .big-six {
+            background: linear-gradient(45deg, #7c3aed, #a855f7);
+            color: white;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
         }
     </style>
 </head>
@@ -246,7 +245,7 @@
                 <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
                 <li class="breadcrumb-item"><a href="sports.html" class="text-decoration-none">Sports</a></li>
                 <li class="breadcrumb-item"><a href="soccer.html" class="text-decoration-none">Soccer</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Brighton vs Man City</li>
+                <li class="breadcrumb-item active" aria-current="page">Man City vs Chelsea</li>
             </ol>
         </nav>
     </div>
@@ -266,26 +265,26 @@
                 <div class="col-md-4 text-center">
                     <div class="mb-3">
                         <i class="fas fa-clock me-2"></i>
-                        <span>Saturday, 17:30 GMT</span>
+                        <span>Tomorrow, 15:00 GMT</span>
                     </div>
                     <h2 class="mb-3">VS</h2>
                     <div class="premier-league mb-2">
                         <i class="fas fa-trophy me-1"></i>
                         Premier League
                     </div>
-                    <div class="stadium-info">
-                        <i class="fas fa-map-marker-alt me-1"></i>
-                        Etihad Stadium
+                    <div class="big-six">
+                        <i class="fas fa-fire me-1"></i>
+                        Big Six Clash
                     </div>
+                    <div class="rivalry-badge mt-2">Classic Rivalry</div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <div class="team-crest mx-auto mb-3 brighton-highlight">
-                        <i class="fas fa-anchor"></i>
+                    <div class="team-crest mx-auto mb-3 chelsea">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Brighton & Hove Albion</h3>
-                    <div class="underdog-badge mb-2">Underdog</div>
+                    <h3>Chelsea</h3>
                     <p class="mb-0">Away Team</p>
-                    <small class="text-light">The Seagulls</small>
+                    <small class="text-light">The Blues</small>
                 </div>
             </div>
         </div>
@@ -306,7 +305,7 @@
                         <div class="col-md-4">
                             <div class="odds-card p-4 text-center">
                                 <h5>Manchester City</h5>
-                                <div class="odds-value mb-2">1.25</div>
+                                <div class="odds-value mb-2">1.75</div>
                                 <p class="text-muted mb-3">Home Win</p>
                                 <button class="btn btn-outline-primary w-100">
                                     <i class="fas fa-plus me-2"></i>Add to Bet Slip
@@ -314,61 +313,61 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="odds-card p-4 text-center">
+                            <div class="odds-card p-4 text-center selected draw-highlight">
                                 <h5>Draw</h5>
-                                <div class="odds-value mb-2">6.50</div>
-                                <p class="text-muted mb-3">Match Ends Level</p>
-                                <button class="btn btn-outline-primary w-100">
-                                    <i class="fas fa-plus me-2"></i>Add to Bet Slip
+                                <div class="odds-value mb-2">3.60</div>
+                                <p class="mb-3">Match Ends Level</p>
+                                <button class="btn btn-light w-100">
+                                    <i class="fas fa-check me-2"></i>Selected
                                 </button>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="odds-card p-4 text-center selected brighton-highlight">
-                                <h5>Brighton</h5>
-                                <div class="odds-value mb-2">5.00</div>
-                                <p class="mb-3">Away Win</p>
-                                <button class="btn btn-light w-100">
-                                    <i class="fas fa-check me-2"></i>Selected
+                            <div class="odds-card p-4 text-center">
+                                <h5>Chelsea</h5>
+                                <div class="odds-value mb-2">4.50</div>
+                                <p class="text-muted mb-3">Away Win</p>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-plus me-2"></i>Add to Bet Slip
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Underdog Analysis -->
+                <!-- Draw Statistics -->
                 <div class="match-info p-4 mb-4">
                     <h4 class="mb-4">
-                        <i class="fas fa-chart-area me-2"></i>
-                        Underdog Analysis & Value
+                        <i class="fas fa-balance-scale me-2"></i>
+                        Big Six Draw Analysis
                     </h4>
                     <div class="row g-3 mb-4">
                         <div class="col-md-4">
-                            <div class="underdog-stats">
-                                <h5>Implied Probability</h5>
-                                <div class="display-6">20%</div>
-                                <small>Brighton win chance at 5.00 odds</small>
+                            <div class="draw-stats">
+                                <h5>Head-to-Head Draws</h5>
+                                <div class="display-6">12</div>
+                                <small>out of last 30 meetings</small>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="value-bet">
-                                <h5>Potential Return</h5>
-                                <div class="display-6">5x</div>
-                                <small>Your stake if Brighton wins</small>
+                            <div class="draw-stats">
+                                <h5>City Home Draws</h5>
+                                <div class="display-6">4</div>
+                                <small>in 15 home games this season</small>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="underdog-stats">
-                                <h5>Recent Upsets</h5>
-                                <div class="display-6">3</div>
-                                <small>Brighton wins vs top 6 this season</small>
+                            <div class="draw-stats">
+                                <h5>Chelsea Away Draws</h5>
+                                <div class="display-6">6</div>
+                                <small>in 15 away games this season</small>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="alert alert-warning">
-                        <h6><i class="fas fa-exclamation-triangle me-2"></i>Underdog Opportunity</h6>
-                        <p class="mb-0">While Manchester City are heavy favorites, Brighton has shown they can compete with top teams this season. They've already beaten Arsenal 2-1 and drew with Liverpool 2-2. At 5.00 odds, this represents significant value if Brighton can pull off another upset. Their counter-attacking style could trouble City's high defensive line.</p>
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-lightbulb me-2"></i>Big Six Rivalry Analysis</h6>
+                        <p class="mb-0">Manchester City vs Chelsea is one of the Premier League's most competitive fixtures. Both teams have strong defensive records and tactical discipline, often leading to cagey affairs. In their last 30 meetings, 40% have ended in draws. Chelsea's defensive approach away from home, combined with City's recent tendency to drop points at home against top opposition, makes the draw at 3.60 an attractive proposition.</p>
                     </div>
                 </div>
 
@@ -376,55 +375,30 @@
                 <div class="match-info p-4 mb-4">
                     <h4 class="mb-4">
                         <i class="fas fa-list me-2"></i>
-                        Brighton Away Markets
+                        Draw Markets & Specials
                     </h4>
                     <div class="row g-3">
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header bg-primary text-white">
-                                    <strong>Brighton Win Specials</strong>
+                                    <strong>Correct Score Draws</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton Win & BTTS</span>
-                                        <span class="odds-value">8.50</span>
+                                        <span>0-0</span>
+                                        <span class="odds-value">11.00</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton Win & Over 2.5</span>
-                                        <span class="odds-value">9.00</span>
+                                        <span>1-1</span>
+                                        <span class="odds-value">6.50</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton Win & Under 2.5</span>
-                                        <span class="odds-value">12.00</span>
+                                        <span>2-2</span>
+                                        <span class="odds-value">14.00</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <span>Brighton Win to Nil</span>
-                                        <span class="odds-value">15.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header bg-primary text-white">
-                                    <strong>Correct Score</strong>
-                                </div>
-                                <div class="card-body">
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton 1-0</span>
-                                        <span class="odds-value">25.00</span>
-                                    </div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton 2-1</span>
-                                        <span class="odds-value">35.00</span>
-                                    </div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton 2-0</span>
+                                        <span>3-3</span>
                                         <span class="odds-value">45.00</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Brighton 3-2</span>
-                                        <span class="odds-value">80.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -436,20 +410,45 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Brighton/Brighton</span>
-                                        <span class="odds-value">12.00</span>
+                                        <span>Draw/Draw</span>
+                                        <span class="odds-value">7.50</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Draw/Brighton</span>
-                                        <span class="odds-value">8.50</span>
+                                        <span>City/Draw</span>
+                                        <span class="odds-value">9.50</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>City/Brighton</span>
-                                        <span class="odds-value">25.00</span>
+                                        <span>Chelsea/Draw</span>
+                                        <span class="odds-value">18.00</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <span>Brighton Win Either Half</span>
-                                        <span class="odds-value">3.20</span>
+                                        <span>Draw/City</span>
+                                        <span class="odds-value">6.80</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <strong>Draw Combinations</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw & Over 2.5</span>
+                                        <span class="odds-value">6.80</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw & Under 2.5</span>
+                                        <span class="odds-value">5.20</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw & BTTS</span>
+                                        <span class="odds-value">6.20</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Goalless Draw</span>
+                                        <span class="odds-value">11.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +464,7 @@
                     </h4>
                     <div class="row">
                         <div class="col-md-6">
-                            <h5 class="text-primary">Manchester City</h5>
+                            <h5 class="text-info">Manchester City</h5>
                             <ul class="list-unstyled">
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>League Position:</span>
@@ -473,72 +472,79 @@
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Home Record:</span>
-                                    <strong>12W-2D-1L</strong>
+                                    <strong>10W-4D-1L</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Goals For/Against:</span>
-                                    <strong>68/23</strong>
+                                    <strong>58/28</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Recent Form:</span>
-                                    <strong class="text-success">W-W-W-W-D</strong>
+                                    <strong class="text-warning">W-D-W-D-W</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Win Streak:</span>
-                                    <strong class="text-success">4 games</strong>
+                                    <span>vs Top 6 at Home:</span>
+                                    <strong class="text-info">2W-2D-0L</strong>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <h5 class="text-warning">Brighton & Hove Albion</h5>
+                            <h5 class="text-primary">Chelsea</h5>
                             <ul class="list-unstyled">
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>League Position:</span>
-                                    <strong>9th</strong>
+                                    <strong>4th</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Away Record:</span>
-                                    <strong>4W-5D-6L</strong>
+                                    <strong>6W-6D-3L</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Goals For/Against:</span>
-                                    <strong>38/42</strong>
+                                    <strong>48/35</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Recent Form:</span>
-                                    <strong class="text-warning">W-L-D-W-L</strong>
+                                    <strong class="text-warning">D-W-D-L-W</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Upsets This Season:</span>
-                                    <strong class="text-info">3 vs Top 6</strong>
+                                    <span>vs Top 6 Away:</span>
+                                    <strong class="text-info">1W-3D-0L</strong>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="mt-4">
-                        <h6>Head-to-Head (Last 5 meetings)</h6>
+                        <h6>Recent Head-to-Head (Last 6 meetings)</h6>
                         <div class="row text-center">
                             <div class="col">
-                                <div class="badge bg-primary p-2">City 3-1</div>
-                                <small class="d-block">Apr 2024</small>
+                                <div class="badge bg-secondary p-2">1-1 Draw</div>
+                                <small class="d-block">May 2024</small>
                             </div>
                             <div class="col">
-                                <div class="badge bg-primary p-2">City 4-0</div>
-                                <small class="d-block">Oct 2023</small>
+                                <div class="badge bg-primary p-2">City 2-0</div>
+                                <small class="d-block">Jan 2024</small>
                             </div>
                             <div class="col">
-                                <div class="badge bg-warning p-2">Brighton 1-0</div>
-                                <small class="d-block">May 2023</small>
-                            </div>
-                            <div class="col">
-                                <div class="badge bg-primary p-2">City 3-0</div>
-                                <small class="d-block">Jan 2023</small>
+                                <div class="badge bg-warning p-2">Chelsea 1-0</div>
+                                <small class="d-block">Nov 2023</small>
                             </div>
                             <div class="col">
                                 <div class="badge bg-secondary p-2">1-1 Draw</div>
-                                <small class="d-block">Aug 2022</small>
+                                <small class="d-block">Aug 2023</small>
                             </div>
+                            <div class="col">
+                                <div class="badge bg-primary p-2">City 3-0</div>
+                                <small class="d-block">May 2023</small>
+                            </div>
+                            <div class="col">
+                                <div class="badge bg-secondary p-2">0-0 Draw</div>
+                                <small class="d-block">Jan 2023</small>
+                            </div>
+                        </div>
+                        <div class="text-center mt-2">
+                            <small class="text-muted">3 draws in last 6 meetings (50%)</small>
                         </div>
                     </div>
                 </div>
@@ -555,17 +561,17 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
-                                        <strong>Brighton & Hove Albion</strong>
+                                        <strong>Draw</strong>
                                         <br>
-                                        <small class="text-muted">Away Win</small>
+                                        <small class="text-muted">Match Result</small>
                                     </div>
                                     <button class="btn btn-sm btn-outline-danger">
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="odds-value">5.00</span>
-                                    <small class="text-muted">Man City vs Brighton</small>
+                                    <span class="odds-value"><a href="draws3.60.html" target="_blank" style="text-decoration: none; color: inherite"> 3.60</a></span>
+                                    <small class="text-muted">Man City vs Chelsea</small>
                                 </div>
                             </div>
                         </div>
@@ -585,10 +591,6 @@
                             <span>Total Return:</span>
                             <strong>$0.00</strong>
                         </div>
-                    </div>
-                    
-                    <div class="alert alert-info p-2 mb-3">
-                        <small><i class="fas fa-info-circle me-1"></i>High odds = High risk, High reward!</small>
                     </div>
                     
                     <div class="d-grid">
@@ -613,55 +615,56 @@
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <span>Referee:</span>
-                        <span class="fw-bold">Anthony Taylor</span>
+                        <span class="fw-bold">Paul Tierney</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <span>Weather:</span>
-                        <span class="fw-bold">Clear, 15°C</span>
+                        <span class="fw-bold">Partly Cloudy, 14°C</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span>TV Coverage:</span>
-                        <span class="fw-bold">BT Sport</span>
+                        <span class="fw-bold">Sky Sports</span>
                     </div>
                 </div>
 
-                <!-- Underdog Betting Tips -->
+                <!-- Tactical Analysis -->
                 <div class="card mt-4">
                     <div class="card-header">
-                        <i class="fas fa-lightbulb me-2"></i>Underdog Betting Tips
+                        <i class="fas fa-chess me-2"></i>Tactical Analysis
                     </div>
                     <div class="card-body">
+                        <h6>Why Draw is Likely:</h6>
                         <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Brighton has upset top teams before</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Counter-attacking style suits away games</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>City may rotate squad for upcoming fixtures</li>
-                            <li class="mb-2"><i class="fas fa-exclamation text-warning me-2"></i>High risk, but 5x return potential</li>
-                            <li><i class="fas fa-info text-info me-2"></i>Consider smaller stakes for value bets</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Both teams defensively solid</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Chelsea's away defensive record</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>City's recent home draws vs top 6</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tactical battle between managers</li>
+                            <li><i class="fas fa-info text-info me-2"></i>50% of recent meetings ended in draws</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Popular Underdog Bets -->
+                <!-- Popular Draw Bets -->
                 <div class="card mt-4">
                     <div class="card-header">
-                        <i class="fas fa-fire me-2"></i>Popular Underdog Bets
+                        <i class="fas fa-fire me-2"></i>Popular Draw Bets
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Brighton Double Chance</span>
-                            <span class="badge bg-primary rounded-pill">2.80</span>
+                            <span>Draw & Both Teams Score</span>
+                            <span class="badge bg-primary rounded-pill">6.20</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Brighton +1.5 Goals</span>
-                            <span class="badge bg-primary rounded-pill">1.65</span>
+                            <span>1-1 Correct Score</span>
+                            <span class="badge bg-primary rounded-pill">6.50</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Brighton to Score</span>
-                            <span class="badge bg-primary rounded-pill">2.20</span>
+                            <span>Draw at Half Time</span>
+                            <span class="badge bg-primary rounded-pill">2.10</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Brighton Win Either Half</span>
-                            <span class="badge bg-primary rounded-pill">3.20</span>
+                            <span>0-0 Correct Score</span>
+                            <span class="badge bg-primary rounded-pill">11.00</span>
                         </li>
                     </ul>
                 </div>
@@ -737,7 +740,7 @@
         // Bet amount calculation
         document.getElementById('betAmount').addEventListener('input', function() {
             const betAmount = parseFloat(this.value) || 0;
-            const odds = 5.00;
+            const odds = 3.60;
             const potentialWin = (betAmount * odds - betAmount).toFixed(2);
             const totalReturn = (betAmount * odds).toFixed(2);
             
