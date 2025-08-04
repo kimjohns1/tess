@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draw Bet 3.60 - Tess Betting</title>
+    <title>Draw Betting 3.60 - Tess Betting</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -66,22 +66,30 @@
             color: white;
         }
         
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/400') center/cover no-repeat;
+        .match-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 80px 0;
+            padding: 40px 0;
+            border-radius: 12px;
+            margin-bottom: 30px;
         }
         
-        .bet-card {
+        .odds-card {
             border-radius: 12px;
             overflow: hidden;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid var(--accent);
+            border: 2px solid transparent;
         }
         
-        .bet-card:hover {
+        .odds-card.selected {
+            border-color: var(--accent);
+            box-shadow: 0 10px 15px rgba(245, 158, 11, 0.2);
             transform: translateY(-2px);
+        }
+        
+        .odds-card:hover {
+            transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         
@@ -91,29 +99,19 @@
             font-weight: bold;
         }
         
-        .odds-display {
-            font-size: 2.5rem;
+        .live-indicator {
+            background-color: var(--danger);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .odds-value {
+            font-size: 2rem;
             font-weight: bold;
             color: var(--accent);
-        }
-        
-        .match-info {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        
-        .team-logo {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
         }
         
         .bet-slip {
@@ -124,12 +122,44 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
-        .stats-item {
+        .stats-section {
             background-color: white;
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+        
+        .team-stats {
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+        }
+        
+        .team-logo {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .match-timeline {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-event {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .timeline-event:last-child {
+            border-bottom: none;
         }
         
         .footer {
@@ -137,19 +167,12 @@
             color: white;
         }
         
-        .breadcrumb {
-            background-color: transparent;
-            padding: 0;
-        }
-        
-        .breadcrumb-item + .breadcrumb-item::before {
-            color: var(--primary);
-        }
-        
-        .alert-info {
-            background-color: rgba(30, 58, 138, 0.1);
-            border-color: var(--primary);
-            color: var(--primary);
+        .potential-win {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
         }
     </style>
 </head>
@@ -184,7 +207,7 @@
                 </ul>
                 <div class="d-flex">
                     <button class="btn btn-outline-light me-2">
-                        <a href="login.html" target="_blank" style="text-decoration: none; color: inherit">Log In</a>
+                        <a href="login.html" target="_blank" style="text-decoration: none; color: inherit">Login</a>
                     </button>
                     <button class="btn btn-accent">
                         <a href="signup.html" target="_blank" style="text-decoration: none; color: inherit">Sign Up</a>
@@ -194,129 +217,198 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero text-center">
-        <div class="container">
-            <h1 class="display-5 fw-bold mb-3">Draw Bet - 3.60 Odds</h1>
-            <p class="lead mb-4">Arsenal vs Liverpool - Premier League</p>
-            <div class="d-flex justify-content-center align-items-center gap-4">
-                <div class="odds-display">3.60</div>
-                <div class="text-center">
-                    <div class="h5 mb-1">Potential Return</div>
-                    <div class="h4 text-warning">$360 on $100 bet</div>
+    <!-- Match Header -->
+    <div class="container mt-4">
+        <div class="match-header text-center">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="team-stats">
+                        <div class="team-logo">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Arsenal</h3>
+                        <p class="mb-0">Current Score: 2</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <span class="live-indicator mb-2 d-inline-block">LIVE</span>
+                        <h2 class="mb-1">2 - 1</h2>
+                        <p class="mb-0">65:23 | Football - Premier League</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-stats">
+                        <div class="team-logo">
+                            <i class="fas fa-dove"></i>
+                        </div>
+                        <h3>Liverpool</h3>
+                        <p class="mb-0">Current Score: 1</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Breadcrumb -->
-    <div class="container mt-4">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-                <li class="breadcrumb-item"><a href="sports.html" class="text-decoration-none">Sports</a></li>
-                <li class="breadcrumb-item"><a href="football.html" class="text-decoration-none">Football</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Draw Bet 3.60</li>
-            </ol>
-        </nav>
     </div>
 
     <!-- Main Content -->
-    <div class="container my-5">
+    <div class="container my-4">
         <div class="row">
-            <!-- Match Information -->
+            <!-- Betting Options -->
             <div class="col-lg-8 mb-4">
-                <!-- Match Details -->
-                <div class="match-info p-4 mb-4">
-                    <div class="row align-items-center mb-4">
-                        <div class="col-md-4 text-center">
-                            <div class="team-logo mx-auto mb-2">ARS</div>
-                            <h4>Arsenal</h4>
-                            <p class="text-muted mb-0">Home Team</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="h2 text-muted mb-2">VS</div>
-                            <div class="badge bg-primary mb-2">Premier League</div>
-                            <div class="text-muted">Today, 15:00</div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="team-logo mx-auto mb-2">LIV</div>
-                            <h4>Liverpool</h4>
-                            <p class="text-muted mb-0">Away Team</p>
-                        </div>
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span><i class="fas fa-handshake me-2"></i>Match Result - Full Time</span>
+                        <small class="text-muted">Updated live</small>
                     </div>
-                </div>
-
-                <!-- Bet Information -->
-                <div class="bet-card p-4 mb-4">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h3 class="mb-3">Draw Bet Details</h3>
-                            <div class="alert alert-info">
-                                <i class="fas fa-info-circle me-2"></i>
-                                <strong>Draw Bet:</strong> This bet wins if the match ends in a tie (draw) after 90 minutes of regular play.
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <!-- Home Win -->
+                            <div class="col-md-4">
+                                <div class="odds-card card h-100 text-center p-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arsenal Win</h5>
+                                        <div class="odds-value mb-2">2.10</div>
+                                        <p class="text-muted small mb-3">Home Victory</p>
+                                        <button class="btn btn-outline-primary w-100">Add to Slip</button>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Bet Type: Match Result - Draw</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Odds: 3.60</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Market: Full Time Result</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Settlement: After 90 minutes + injury time</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="odds-display mb-3">3.60</div>
-                            <button class="btn btn-accent btn-lg w-100 mb-2">
-                                <i class="fas fa-plus me-2"></i>Add to Bet Slip
-                            </button>
-                            <small class="text-muted">Click to add this selection</small>
+                            
+                            <!-- Draw - Selected -->
+                            <div class="col-md-4">
+                                <div class="odds-card card h-100 text-center p-3 selected">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="fas fa-handshake me-2"></i>Draw
+                                        </h5>
+                                        <div class="odds-value mb-2">3.60</div>
+                                        <p class="text-success small mb-3">
+                                            <i class="fas fa-check me-1"></i>Selected
+                                        </p>
+                                        <button class="btn btn-accent w-100" id="drawButton">
+                                            <i class="fas fa-check me-1"></i>Added to Slip
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Away Win -->
+                            <div class="col-md-4">
+                                <div class="odds-card card h-100 text-center p-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Liverpool Win</h5>
+                                        <div class="odds-value mb-2">3.75</div>
+                                        <p class="text-muted small mb-3">Away Victory</p>
+                                        <button class="btn btn-outline-primary w-100">Add to Slip</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Match Statistics -->
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">Head-to-Head Statistics</h5>
+                <div class="stats-section mt-4">
+                    <h5 class="mb-4"><i class="fas fa-chart-bar me-2"></i>Match Statistics</h5>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Possession</span>
+                                <span class="fw-bold">58% - 42%</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-primary" style="width: 58%"></div>
+                                <div class="progress-bar bg-danger" style="width: 42%"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Shots on Target</span>
+                                <span class="fw-bold">4 - 3</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-primary" style="width: 57%"></div>
+                                <div class="progress-bar bg-danger" style="width: 43%"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Corner Kicks</span>
+                                <span class="fw-bold">6 - 3</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-primary" style="width: 67%"></div>
+                                <div class="progress-bar bg-danger" style="width: 33%"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Yellow Cards</span>
+                                <span class="fw-bold">2 - 3</span>
+                            </div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-primary" style="width: 40%"></div>
+                                <div class="progress-bar bg-danger" style="width: 60%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="stats-item">
-                                    <div class="h4 text-primary">8</div>
-                                    <div class="text-muted">Arsenal Wins</div>
+                </div>
+
+                <!-- Match Timeline -->
+                <div class="match-timeline mt-4">
+                    <div class="card-header">
+                        <i class="fas fa-clock me-2"></i>Match Timeline
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="timeline-event">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-center">
+                                    <span class="badge bg-success">12'</span>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="stats-item">
-                                    <div class="h4 text-accent">5</div>
-                                    <div class="text-muted">Draws</div>
+                                <div class="col-8">
+                                    <strong>GOAL!</strong> Arsenal 1-0 Liverpool - Saka scores
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="stats-item">
-                                    <div class="h4 text-danger">7</div>
-                                    <div class="text-muted">Liverpool Wins</div>
+                                <div class="col-2 text-end">
+                                    <i class="fas fa-futbol text-success"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-4">
-                            <h6>Recent Form</h6>
-                            <div class="row">
-                                <div class="col-6">
-                                    <strong>Arsenal:</strong> 
-                                    <span class="badge bg-success ms-1">W</span>
-                                    <span class="badge bg-warning ms-1">D</span>
-                                    <span class="badge bg-success ms-1">W</span>
-                                    <span class="badge bg-danger ms-1">L</span>
-                                    <span class="badge bg-success ms-1">W</span>
+                        <div class="timeline-event">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-center">
+                                    <span class="badge bg-warning">28'</span>
                                 </div>
-                                <div class="col-6">
-                                    <strong>Liverpool:</strong> 
-                                    <span class="badge bg-success ms-1">W</span>
-                                    <span class="badge bg-success ms-1">W</span>
-                                    <span class="badge bg-warning ms-1">D</span>
-                                    <span class="badge bg-success ms-1">W</span>
-                                    <span class="badge bg-warning ms-1">D</span>
+                                <div class="col-8">
+                                    Yellow Card - Liverpool (Salah)
+                                </div>
+                                <div class="col-2 text-end">
+                                    <i class="fas fa-square text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-center">
+                                    <span class="badge bg-danger">43'</span>
+                                </div>
+                                <div class="col-8">
+                                    <strong>GOAL!</strong> Arsenal 1-1 Liverpool - Mané equalizer
+                                </div>
+                                <div class="col-2 text-end">
+                                    <i class="fas fa-futbol text-danger"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-center">
+                                    <span class="badge bg-success">58'</span>
+                                </div>
+                                <div class="col-8">
+                                    <strong>GOAL!</strong> Arsenal 2-1 Liverpool - Ødegaard scores
+                                </div>
+                                <div class="col-2 text-end">
+                                    <i class="fas fa-futbol text-success"></i>
                                 </div>
                             </div>
                         </div>
@@ -326,52 +418,78 @@
 
             <!-- Bet Slip -->
             <div class="col-lg-4">
-                <div class="bet-slip p-3 mb-4">
-                    <h5 class="border-bottom pb-2 mb-3">Bet Slip</h5>
-                    <div class="bet-selection p-3 bg-light rounded mb-3">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <strong>Arsenal vs Liverpool</strong>
-                            <button class="btn btn-sm btn-outline-danger">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span>Draw</span>
-                            <span class="fw-bold text-accent"><a href="draw3.60.html" target="_blank" style="text-decoration: none; color: inherite"> 3.60</a></span>
-                        </div>
-                        <div class="input-group input-group-sm">
-                            <span class="input-group-text">$</span>
-                            <input type="number" class="form-control" placeholder="Stake" value="100">
-                        </div>
-                        <div class="d-flex justify-content-between mt-2">
-                            <small class="text-muted">Potential Return:</small>
-                            <small class="fw-bold">$360.00</small>
+                <div class="bet-slip p-3">
+                    <h5 class="border-bottom pb-2 mb-3">
+                        <i class="fas fa-ticket-alt me-2"></i>Bet Slip (1)
+                    </h5>
+                    
+                    <!-- Selected Bet -->
+                    <div class="selected-bet mb-3 p-3 border rounded">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div>
+                                <strong>Draw</strong>
+                                <br>
+                                <small class="text-muted">Arsenal vs Liverpool</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="odds-value" style="font-size: 1.2rem;"><a href="draw3.60.html" target="_blank" style="text-decoration: none; color: inherite"> 3.60</a></span>
+                                <br>
+                                <button class="btn btn-sm btn-outline-danger" onclick="removeBet()">
+                                    <i class="fas fa-times"></i>
+                               </button>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Bet Amount -->
+                    <div class="mb-3">
+                        <label class="form-label">Stake Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="stakeAmount" value="10" min="1" onchange="calculateWin()">
+                        </div>
+                    </div>
+
+                    <!-- Potential Win -->
+                    <div class="potential-win mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Potential Win:</span>
+                            <strong id="potentialWin">$36.00</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <span>Total Return:</span>
+                            <strong id="totalReturn">$46.00</strong>
+                        </div>
+                    </div>
+
                     <div class="d-grid">
-                        <button class="btn btn-accent btn-lg">Place Bet</button>
+                        <button class="btn btn-accent btn-lg" onclick="placeBet()">
+                            <i class="fas fa-check me-2"></i>Place Bet
+                        </button>
                     </div>
                 </div>
 
-                <!-- Other Markets -->
-                <div class="card">
+                <!-- Quick Stats -->
+                <div class="card mt-4">
                     <div class="card-header">
-                        Other Markets
+                        <i class="fas fa-info-circle me-2"></i>Draw Statistics
                     </div>
-                    <div class="card-body p-0">
-                        <div class="list-group list-group-flush">
-                            <a href="arsenal2.10.html" class="list-group-item list-group-item-action d-flex justify-content-between">
-                                Arsenal Win <span class="text-accent fw-bold">2.10</span>
-                            </a>
-                            <a href="liverpool3.75.html" class="list-group-item list-group-item-action d-flex justify-content-between">
-                                Liverpool Win <span class="text-accent fw-bold">3.75</span>
-                            </a>
-                            <a href="over2.5.html" class="list-group-item list-group-item-action d-flex justify-content-between">
-                                Over 2.5 Goals <span class="text-accent fw-bold">1.85</span>
-                            </a>
-                            <a href="under2.5.html" class="list-group-item list-group-item-action d-flex justify-content-between">
-                                Under 2.5 Goals <span class="text-accent fw-bold">1.95</span>
-                            </a>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Last 5 H2H:</span>
+                            <span class="fw-bold">2 Draws</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Arsenal draws this season:</span>
+                            <span class="fw-bold">6/25</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Liverpool draws this season:</span>
+                            <span class="fw-bold">4/25</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Draw probability:</span>
+                            <span class="fw-bold text-accent">27.8%</span>
                         </div>
                     </div>
                 </div>
@@ -380,7 +498,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer py-5">
+    <footer class="footer py-5 mt-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -417,17 +535,11 @@
                 </div>
                 
                 <div class="col-lg-4">
-                    <h5 class="mb-4">Newsletter</h5>
-                    <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                    <h5 class="mb-4">Stay Updated</h5>
+                    <p>Get the latest odds and betting tips delivered to your inbox.</p>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Your email address">
                         <button class="btn btn-accent" type="button">Subscribe</button>
-                    </div>
-                    <div class="mt-4">
-                        <img src="/api/placeholder/50/30" alt="Payment Method" class="me-2">
-                        <img src="/api/placeholder/50/30" alt="Payment Method" class="me-2">
-                        <img src="/api/placeholder/50/30" alt="Payment Method" class="me-2">
-                        <img src="/api/placeholder/50/30" alt="Payment Method">
                     </div>
                 </div>
             </div>
@@ -440,5 +552,34 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function calculateWin() {
+            const stake = parseFloat(document.getElementById('stakeAmount').value) || 0;
+            const odds = 3.60;
+            const potentialWin = (stake * odds) - stake;
+            const totalReturn = stake * odds;
+            
+            document.getElementById('potentialWin').textContent = '$' + potentialWin.toFixed(2);
+            document.getElementById('totalReturn').textContent = '$' + totalReturn.toFixed(2);
+        }
+        
+        function removeBet() {
+            alert('Bet removed from slip!');
+            // In a real application, this would remove the bet and redirect
+        }
+        
+        function placeBet() {
+            const stake = document.getElementById('stakeAmount').value;
+            if (stake && parseFloat(stake) > 0) {
+                alert('Bet placed successfully! Good luck with your draw bet!');
+            } else {
+                alert('Please enter a valid stake amount.');
+            }
+        }
+        
+        // Auto-calculate on page load
+        calculateWin();
+    </script>
 </body>
 </html>
