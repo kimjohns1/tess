@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Djokovic vs Nadal - ATP Tennis - Tess Betting</title>
+    <title>Manchester United vs Tottenham - Draw Bet - Tess Betting</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -79,18 +79,18 @@
             margin-bottom: 2rem;
         }
         
-        .player-avatar {
-            width: 100px;
-            height: 100px;
+        .team-crest {
+            width: 90px;
+            height: 90px;
             background-color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--primary);
             font-weight: bold;
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
         
         .odds-card {
@@ -142,35 +142,42 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
-        .djokovic-highlight {
-            background: linear-gradient(135deg, #0066cc, #004499);
+        .draw-highlight {
+            background: linear-gradient(135deg, #6b7280, #9ca3af);
             color: white;
             border-radius: 8px;
             padding: 1rem;
         }
         
-        .tennis-court {
-            background: linear-gradient(45deg, #2d5a27, #4a7c59);
-            color: white;
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-        }
-        
-        .atp-badge {
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
+        .premier-league {
+            background: linear-gradient(45deg, #3d1a78, #00ff87);
             color: white;
             border-radius: 20px;
             padding: 0.5rem 1rem;
             font-weight: bold;
         }
         
-        .ranking-badge {
-            background-color: var(--accent);
+        .stadium-info {
+            background: linear-gradient(45deg, #059669, #10b981);
             color: white;
-            border-radius: 15px;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-            font-weight: bold;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+        }
+        
+        .man-utd {
+            background: linear-gradient(135deg, #da020e, #ff1e2d);
+        }
+        
+        .tottenham {
+            background: linear-gradient(135deg, #132257, #1c2e5a);
+        }
+        
+        .draw-stats {
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -221,8 +228,8 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
                 <li class="breadcrumb-item"><a href="sports.html" class="text-decoration-none">Sports</a></li>
-                <li class="breadcrumb-item"><a href="tennis.html" class="text-decoration-none">Tennis</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Djokovic vs Nadal</li>
+                <li class="breadcrumb-item"><a href="soccer.html" class="text-decoration-none">Soccer</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Man United vs Tottenham</li>
             </ol>
         </nav>
     </div>
@@ -232,35 +239,35 @@
         <div class="match-header">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
-                    <div class="player-avatar mx-auto mb-3 djokovic-highlight">
-                        <i class="fas fa-crown"></i>
+                    <div class="team-crest mx-auto mb-3 man-utd">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Novak Djokovic</h3>
-                    <div class="ranking-badge mb-2">ATP #1</div>
-                    <p class="mb-0">24 Grand Slams</p>
+                    <h3>Manchester United</h3>
+                    <p class="mb-0">Home Team</p>
+                    <small class="text-light">Old Trafford</small>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="mb-3">
                         <i class="fas fa-clock me-2"></i>
-                        <span>Today, 16:30 EST</span>
+                        <span>Sunday, 16:30 GMT</span>
                     </div>
                     <h2 class="mb-3">VS</h2>
-                    <div class="atp-badge">
+                    <div class="premier-league mb-2">
                         <i class="fas fa-trophy me-1"></i>
-                        ATP Masters 1000
+                        Premier League
                     </div>
-                    <div class="tennis-court mt-2">
-                        <i class="fas fa-circle me-1"></i>
-                        Hard Court
+                    <div class="stadium-info">
+                        <i class="fas fa-map-marker-alt me-1"></i>
+                        Old Trafford
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <div class="player-avatar mx-auto mb-3" style="background: linear-gradient(135deg, #cc6600, #ff8800);">
-                        <i class="fas fa-fire"></i>
+                    <div class="team-crest mx-auto mb-3 tottenham">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Rafael Nadal</h3>
-                    <div class="ranking-badge mb-2">ATP #4</div>
-                    <p class="mb-0">22 Grand Slams</p>
+                    <h3>Tottenham</h3>
+                    <p class="mb-0">Away Team</p>
+                    <small class="text-light">Spurs</small>
                 </div>
             </div>
         </div>
@@ -275,24 +282,34 @@
                 <div class="match-info p-4 mb-4">
                     <h4 class="mb-4">
                         <i class="fas fa-chart-line me-2"></i>
-                        Match Winner
+                        Match Result (1X2)
                     </h4>
                     <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="odds-card p-4 text-center selected djokovic-highlight">
-                                <h5>Novak Djokovic</h5>
-                                <div class="odds-value mb-2">1.65</div>
-                                <p class="mb-3">Match Winner</p>
+                        <div class="col-md-4">
+                            <div class="odds-card p-4 text-center">
+                                <h5>Manchester United</h5>
+                                <div class="odds-value mb-2">2.10</div>
+                                <p class="text-muted mb-3">Home Win</p>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-plus me-2"></i>Add to Bet Slip
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="odds-card p-4 text-center selected draw-highlight">
+                                <h5>Draw</h5>
+                                <div class="odds-value mb-2">3.80</div>
+                                <p class="mb-3">Match Ends Level</p>
                                 <button class="btn btn-light w-100">
                                     <i class="fas fa-check me-2"></i>Selected
                                 </button>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="odds-card p-4 text-center">
-                                <h5>Rafael Nadal</h5>
-                                <div class="odds-value mb-2">2.25</div>
-                                <p class="text-muted mb-3">Match Winner</p>
+                                <h5>Tottenham</h5>
+                                <div class="odds-value mb-2">3.20</div>
+                                <p class="text-muted mb-3">Away Win</p>
                                 <button class="btn btn-outline-primary w-100">
                                     <i class="fas fa-plus me-2"></i>Add to Bet Slip
                                 </button>
@@ -301,34 +318,70 @@
                     </div>
                 </div>
 
+                <!-- Draw Statistics -->
+                <div class="match-info p-4 mb-4">
+                    <h4 class="mb-4">
+                        <i class="fas fa-balance-scale me-2"></i>
+                        Draw Statistics & Analysis
+                    </h4>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="draw-stats">
+                                <h5>Head-to-Head Draws</h5>
+                                <div class="display-6">8</div>
+                                <small>out of last 20 meetings</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="draw-stats">
+                                <h5>Man United Draws</h5>
+                                <div class="display-6">6</div>
+                                <small>in 15 home games this season</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="draw-stats">
+                                <h5>Tottenham Draws</h5>
+                                <div class="display-6">7</div>
+                                <small>in 15 away games this season</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-lightbulb me-2"></i>Draw Analysis</h6>
+                        <p class="mb-0">Both teams have shown a tendency to draw in recent matches. Manchester United has drawn 40% of their home games this season, while Tottenham has drawn 47% of their away fixtures. The historical head-to-head record shows 8 draws in the last 20 meetings, making this an attractive draw betting opportunity.</p>
+                    </div>
+                </div>
+
                 <!-- Additional Markets -->
                 <div class="match-info p-4 mb-4">
                     <h4 class="mb-4">
                         <i class="fas fa-list me-2"></i>
-                        Additional Markets
+                        Additional Draw Markets
                     </h4>
                     <div class="row g-3">
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header bg-primary text-white">
-                                    <strong>Set Betting</strong>
+                                    <strong>Correct Score Draws</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Djokovic 2-0</span>
-                                        <span class="odds-value">2.80</span>
+                                        <span>0-0</span>
+                                        <span class="odds-value">9.50</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Djokovic 2-1</span>
-                                        <span class="odds-value">3.20</span>
+                                        <span>1-1</span>
+                                        <span class="odds-value">6.80</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Nadal 2-0</span>
-                                        <span class="odds-value">4.50</span>
+                                        <span>2-2</span>
+                                        <span class="odds-value">12.00</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <span>Nadal 2-1</span>
-                                        <span class="odds-value">5.20</span>
+                                        <span>3-3</span>
+                                        <span class="odds-value">35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -336,24 +389,24 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header bg-primary text-white">
-                                    <strong>Total Games</strong>
+                                    <strong>Half Time/Full Time</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Over 21.5</span>
-                                        <span class="odds-value">1.90</span>
+                                        <span>Draw/Draw</span>
+                                        <span class="odds-value">8.50</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Under 21.5</span>
-                                        <span class="odds-value">1.90</span>
+                                        <span>Man Utd/Draw</span>
+                                        <span class="odds-value">12.00</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Over 23.5</span>
-                                        <span class="odds-value">2.40</span>
+                                        <span>Tottenham/Draw</span>
+                                        <span class="odds-value">15.00</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <span>Under 23.5</span>
-                                        <span class="odds-value">1.55</span>
+                                        <span>Draw/Man Utd</span>
+                                        <span class="odds-value">8.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -361,105 +414,85 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header bg-primary text-white">
-                                    <strong>First Set Winner</strong>
+                                    <strong>Draw Specials</strong>
                                 </div>
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <strong>Djokovic</strong>
-                                        <span class="odds-value ms-2">1.70</span>
+                                <div class="card-body">
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw & Over 2.5</span>
+                                        <span class="odds-value">7.20</span>
                                     </div>
-                                    <div class="mb-3">
-                                        <strong>Nadal</strong>
-                                        <span class="odds-value ms-2">2.10</span>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw & Under 2.5</span>
+                                        <span class="odds-value">5.40</span>
                                     </div>
-                                    <button class="btn btn-outline-primary btn-sm w-100">
-                                        View All Markets
-                                    </button>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw & BTTS</span>
+                                        <span class="odds-value">6.80</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Goalless Draw</span>
+                                        <span class="odds-value">9.50</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Head to Head & Statistics -->
+                <!-- Team Form & Statistics -->
                 <div class="match-info p-4">
                     <h4 class="mb-4">
                         <i class="fas fa-chart-bar me-2"></i>
-                        Head to Head & Statistics
+                        Team Form & Statistics
                     </h4>
-                    
-                    <!-- Head to Head -->
-                    <div class="row mb-4">
-                        <div class="col-12">
-                            <div class="text-center mb-3">
-                                <h5>Career Head-to-Head</h5>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="text-primary fw-bold fs-3">30</div>
-                                    <div class="mx-3 text-muted">-</div>
-                                    <div class="text-warning fw-bold fs-3">29</div>
-                                </div>
-                                <small class="text-muted">Djokovic leads 30-29</small>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Player Statistics -->
                     <div class="row">
                         <div class="col-md-6">
-                            <h5 class="text-primary">Novak Djokovic</h5>
+                            <h5 class="text-danger">Manchester United</h5>
                             <ul class="list-unstyled">
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Current Ranking:</span>
-                                    <strong>#1</strong>
+                                    <span>League Position:</span>
+                                    <strong>6th</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Hard Court W-L (2024):</span>
-                                    <strong>28-4</strong>
+                                    <span>Home Record:</span>
+                                    <strong>6W-6D-3L</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Aces per Match:</span>
-                                    <strong>8.2</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>1st Serve %:</span>
-                                    <strong>64%</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Break Points Saved:</span>
-                                    <strong>67%</strong>
+                                    <span>Goals For/Against:</span>
+                                    <strong>42/38</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Recent Form:</span>
-                                    <strong class="text-success">W-W-W-W-L</strong>
+                                    <strong class="text-warning">D-W-D-L-D</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Draws This Season:</span>
+                                    <strong class="text-info">12</strong>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <h5 class="text-warning">Rafael Nadal</h5>
+                            <h5 class="text-primary">Tottenham</h5>
                             <ul class="list-unstyled">
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Current Ranking:</span>
-                                    <strong>#4</strong>
+                                    <span>League Position:</span>
+                                    <strong>8th</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Hard Court W-L (2024):</span>
-                                    <strong>18-8</strong>
+                                    <span>Away Record:</span>
+                                    <strong>5W-7D-3L</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <span>Aces per Match:</span>
-                                    <strong>6.8</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>1st Serve %:</span>
-                                    <strong>68%</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Break Points Saved:</span>
-                                    <strong>62%</strong>
+                                    <span>Goals For/Against:</span>
+                                    <strong>45/42</strong>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
                                     <span>Recent Form:</span>
-                                    <strong class="text-warning">W-L-W-W-W</strong>
+                                    <strong class="text-warning">D-D-W-D-L</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Draws This Season:</span>
+                                    <strong class="text-info">11</strong>
                                 </li>
                             </ul>
                         </div>
@@ -478,17 +511,17 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
-                                        <strong>Novak Djokovic</strong>
+                                        <strong>Draw</strong>
                                         <br>
-                                        <small class="text-muted">Match Winner</small>
+                                        <small class="text-muted">Match Result</small>
                                     </div>
                                     <button class="btn btn-sm btn-outline-danger">
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="odds-value"><a href="home1.65.html" target="_blank" style="text-decoration: none; color: inherite"> 1.65</a></span>
-                                    <small class="text-muted">ATP Masters</small>
+                                    <span class="odds-value"><a href="draw3.80.html" target="_blank" style="text-decoration: none; color: inherite"> 3.80</a></span>
+                                    <small class="text-muted">Man Utd vs Tottenham</small>
                                 </div>
                             </div>
                         </div>
@@ -523,48 +556,48 @@
                         <i class="fas fa-info-circle me-2"></i>Match Info
                     </h5>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Tournament:</span>
-                        <span class="fw-bold">ATP Masters 1000</span>
+                        <span>Competition:</span>
+                        <span class="fw-bold">Premier League</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Surface:</span>
-                        <span class="fw-bold">Hard Court</span>
+                        <span>Venue:</span>
+                        <span class="fw-bold">Old Trafford</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Round:</span>
-                        <span class="fw-bold">Semi-Final</span>
+                        <span>Referee:</span>
+                        <span class="fw-bold">Michael Oliver</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Best of:</span>
-                        <span class="fw-bold">3 Sets</span>
+                        <span>Weather:</span>
+                        <span class="fw-bold">Cloudy, 12°C</span>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <span>Prize Money:</span>
-                        <span class="fw-bold">$1.2M</span>
+                        <span>TV Coverage:</span>
+                        <span class="fw-bold">Sky Sports</span>
                     </div>
                 </div>
 
-                <!-- Popular Bets -->
+                <!-- Popular Draw Bets -->
                 <div class="card mt-4">
                     <div class="card-header">
-                        <i class="fas fa-fire me-2"></i>Popular Tennis Bets
+                        <i class="fas fa-fire me-2"></i>Popular Draw Bets
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Djokovic & Over 21.5 Games</span>
-                            <span class="badge bg-primary rounded-pill">2.90</span>
+                            <span>Draw & Both Teams Score</span>
+                            <span class="badge bg-primary rounded-pill">6.80</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Djokovic 2-0 & Under 20.5</span>
-                            <span class="badge bg-primary rounded-pill">4.20</span>
+                            <span>1-1 Correct Score</span>
+                            <span class="badge bg-primary rounded-pill">6.80</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Match to go 3 Sets</span>
-                            <span class="badge bg-primary rounded-pill">2.60</span>
+                            <span>Draw at Half Time</span>
+                            <span class="badge bg-primary rounded-pill">2.20</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Both Players to Win a Set</span>
-                            <span class="badge bg-primary rounded-pill">2.40</span>
+                            <span>0-0 Correct Score</span>
+                            <span class="badge bg-primary rounded-pill">9.50</span>
                         </li>
                     </ul>
                 </div>
@@ -640,7 +673,7 @@
         // Bet amount calculation
         document.getElementById('betAmount').addEventListener('input', function() {
             const betAmount = parseFloat(this.value) || 0;
-            const odds = 1.65;
+            const odds = 3.80;
             const potentialWin = (betAmount * odds - betAmount).toFixed(2);
             const totalReturn = (betAmount * odds).toFixed(2);
             

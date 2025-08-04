@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Djokovic vs Nadal - ATP Tennis - Tess Betting</title>
+    <title>Brighton vs Manchester City - Away Win - Tess Betting</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -79,18 +79,18 @@
             margin-bottom: 2rem;
         }
         
-        .player-avatar {
-            width: 100px;
-            height: 100px;
+        .team-crest {
+            width: 90px;
+            height: 90px;
             background-color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--primary);
             font-weight: bold;
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
         
         .odds-card {
@@ -142,30 +142,54 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
-        .djokovic-highlight {
-            background: linear-gradient(135deg, #0066cc, #004499);
+        .brighton-highlight {
+            background: linear-gradient(135deg, #0057b8, #ffcd00);
             color: white;
             border-radius: 8px;
             padding: 1rem;
         }
         
-        .tennis-court {
-            background: linear-gradient(45deg, #2d5a27, #4a7c59);
-            color: white;
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-        }
-        
-        .atp-badge {
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
+        .premier-league {
+            background: linear-gradient(45deg, #3d1a78, #00ff87);
             color: white;
             border-radius: 20px;
             padding: 0.5rem 1rem;
             font-weight: bold;
         }
         
-        .ranking-badge {
-            background-color: var(--accent);
+        .stadium-info {
+            background: linear-gradient(45deg, #059669, #10b981);
+            color: white;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+        }
+        
+        .man-city {
+            background: linear-gradient(135deg, #6cabdd, #1c2e5a);
+        }
+        
+        .brighton {
+            background: linear-gradient(135deg, #0057b8, #ffcd00);
+        }
+        
+        .underdog-stats {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .value-bet {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .underdog-badge {
+            background-color: var(--danger);
             color: white;
             border-radius: 15px;
             padding: 0.25rem 0.75rem;
@@ -221,8 +245,8 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
                 <li class="breadcrumb-item"><a href="sports.html" class="text-decoration-none">Sports</a></li>
-                <li class="breadcrumb-item"><a href="tennis.html" class="text-decoration-none">Tennis</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Djokovic vs Nadal</li>
+                <li class="breadcrumb-item"><a href="soccer.html" class="text-decoration-none">Soccer</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Brighton vs Man City</li>
             </ol>
         </nav>
     </div>
@@ -232,35 +256,36 @@
         <div class="match-header">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
-                    <div class="player-avatar mx-auto mb-3 djokovic-highlight">
+                    <div class="team-crest mx-auto mb-3 man-city">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3>Novak Djokovic</h3>
-                    <div class="ranking-badge mb-2">ATP #1</div>
-                    <p class="mb-0">24 Grand Slams</p>
+                    <h3>Manchester City</h3>
+                    <p class="mb-0">Home Team</p>
+                    <small class="text-light">The Citizens</small>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="mb-3">
                         <i class="fas fa-clock me-2"></i>
-                        <span>Today, 16:30 EST</span>
+                        <span>Saturday, 17:30 GMT</span>
                     </div>
                     <h2 class="mb-3">VS</h2>
-                    <div class="atp-badge">
+                    <div class="premier-league mb-2">
                         <i class="fas fa-trophy me-1"></i>
-                        ATP Masters 1000
+                        Premier League
                     </div>
-                    <div class="tennis-court mt-2">
-                        <i class="fas fa-circle me-1"></i>
-                        Hard Court
+                    <div class="stadium-info">
+                        <i class="fas fa-map-marker-alt me-1"></i>
+                        Etihad Stadium
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <div class="player-avatar mx-auto mb-3" style="background: linear-gradient(135deg, #cc6600, #ff8800);">
-                        <i class="fas fa-fire"></i>
+                    <div class="team-crest mx-auto mb-3 brighton-highlight">
+                        <i class="fas fa-anchor"></i>
                     </div>
-                    <h3>Rafael Nadal</h3>
-                    <div class="ranking-badge mb-2">ATP #4</div>
-                    <p class="mb-0">22 Grand Slams</p>
+                    <h3>Brighton & Hove Albion</h3>
+                    <div class="underdog-badge mb-2">Underdog</div>
+                    <p class="mb-0">Away Team</p>
+                    <small class="text-light">The Seagulls</small>
                 </div>
             </div>
         </div>
@@ -275,29 +300,75 @@
                 <div class="match-info p-4 mb-4">
                     <h4 class="mb-4">
                         <i class="fas fa-chart-line me-2"></i>
-                        Match Winner
+                        Match Result (1X2)
                     </h4>
                     <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="odds-card p-4 text-center selected djokovic-highlight">
-                                <h5>Novak Djokovic</h5>
-                                <div class="odds-value mb-2">1.65</div>
-                                <p class="mb-3">Match Winner</p>
-                                <button class="btn btn-light w-100">
-                                    <i class="fas fa-check me-2"></i>Selected
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="odds-card p-4 text-center">
-                                <h5>Rafael Nadal</h5>
-                                <div class="odds-value mb-2">2.25</div>
-                                <p class="text-muted mb-3">Match Winner</p>
+                                <h5>Manchester City</h5>
+                                <div class="odds-value mb-2">1.25</div>
+                                <p class="text-muted mb-3">Home Win</p>
                                 <button class="btn btn-outline-primary w-100">
                                     <i class="fas fa-plus me-2"></i>Add to Bet Slip
                                 </button>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="odds-card p-4 text-center">
+                                <h5>Draw</h5>
+                                <div class="odds-value mb-2">6.50</div>
+                                <p class="text-muted mb-3">Match Ends Level</p>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-plus me-2"></i>Add to Bet Slip
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="odds-card p-4 text-center selected brighton-highlight">
+                                <h5>Brighton</h5>
+                                <div class="odds-value mb-2">5.00</div>
+                                <p class="mb-3">Away Win</p>
+                                <button class="btn btn-light w-100">
+                                    <i class="fas fa-check me-2"></i>Selected
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Underdog Analysis -->
+                <div class="match-info p-4 mb-4">
+                    <h4 class="mb-4">
+                        <i class="fas fa-chart-area me-2"></i>
+                        Underdog Analysis & Value
+                    </h4>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="underdog-stats">
+                                <h5>Implied Probability</h5>
+                                <div class="display-6">20%</div>
+                                <small>Brighton win chance at 5.00 odds</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="value-bet">
+                                <h5>Potential Return</h5>
+                                <div class="display-6">5x</div>
+                                <small>Your stake if Brighton wins</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="underdog-stats">
+                                <h5>Recent Upsets</h5>
+                                <div class="display-6">3</div>
+                                <small>Brighton wins vs top 6 this season</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <h6><i class="fas fa-exclamation-triangle me-2"></i>Underdog Opportunity</h6>
+                        <p class="mb-0">While Manchester City are heavy favorites, Brighton has shown they can compete with top teams this season. They've already beaten Arsenal 2-1 and drew with Liverpool 2-2. At 5.00 odds, this represents significant value if Brighton can pull off another upset. Their counter-attacking style could trouble City's high defensive line.</p>
                     </div>
                 </div>
 
@@ -305,163 +376,169 @@
                 <div class="match-info p-4 mb-4">
                     <h4 class="mb-4">
                         <i class="fas fa-list me-2"></i>
-                        Additional Markets
+                        Brighton Away Markets
                     </h4>
                     <div class="row g-3">
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header bg-primary text-white">
-                                    <strong>Set Betting</strong>
+                                    <strong>Brighton Win Specials</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Djokovic 2-0</span>
-                                        <span class="odds-value">2.80</span>
+                                        <span>Brighton Win & BTTS</span>
+                                        <span class="odds-value">8.50</span>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-between">
-                                        <span>Djokovic 2-1</span>
+                                        <span>Brighton Win & Over 2.5</span>
+                                        <span class="odds-value">9.00</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Brighton Win & Under 2.5</span>
+                                        <span class="odds-value">12.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Brighton Win to Nil</span>
+                                        <span class="odds-value">15.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <strong>Correct Score</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Brighton 1-0</span>
+                                        <span class="odds-value">25.00</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Brighton 2-1</span>
+                                        <span class="odds-value">35.00</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Brighton 2-0</span>
+                                        <span class="odds-value">45.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Brighton 3-2</span>
+                                        <span class="odds-value">80.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <strong>Half Time/Full Time</strong>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Brighton/Brighton</span>
+                                        <span class="odds-value">12.00</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>Draw/Brighton</span>
+                                        <span class="odds-value">8.50</span>
+                                    </div>
+                                    <div class="mb-2 d-flex justify-content-between">
+                                        <span>City/Brighton</span>
+                                        <span class="odds-value">25.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Brighton Win Either Half</span>
                                         <span class="odds-value">3.20</span>
                                     </div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Nadal 2-0</span>
-                                        <span class="odds-value">4.50</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Nadal 2-1</span>
-                                        <span class="odds-value">5.20</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header bg-primary text-white">
-                                    <strong>Total Games</strong>
-                                </div>
-                                <div class="card-body">
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Over 21.5</span>
-                                        <span class="odds-value">1.90</span>
-                                    </div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Under 21.5</span>
-                                        <span class="odds-value">1.90</span>
-                                    </div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span>Over 23.5</span>
-                                        <span class="odds-value">2.40</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Under 23.5</span>
-                                        <span class="odds-value">1.55</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header bg-primary text-white">
-                                    <strong>First Set Winner</strong>
-                                </div>
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <strong>Djokovic</strong>
-                                        <span class="odds-value ms-2">1.70</span>
-                                    </div>
-                                    <div class="mb-3">
-                                        <strong>Nadal</strong>
-                                        <span class="odds-value ms-2">2.10</span>
-                                    </div>
-                                    <button class="btn btn-outline-primary btn-sm w-100">
-                                        View All Markets
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Head to Head & Statistics -->
+                <!-- Team Form & Statistics -->
                 <div class="match-info p-4">
                     <h4 class="mb-4">
                         <i class="fas fa-chart-bar me-2"></i>
-                        Head to Head & Statistics
+                        Team Form & Head-to-Head
                     </h4>
-                    
-                    <!-- Head to Head -->
-                    <div class="row mb-4">
-                        <div class="col-12">
-                            <div class="text-center mb-3">
-                                <h5>Career Head-to-Head</h5>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="text-primary fw-bold fs-3">30</div>
-                                    <div class="mx-3 text-muted">-</div>
-                                    <div class="text-warning fw-bold fs-3">29</div>
-                                </div>
-                                <small class="text-muted">Djokovic leads 30-29</small>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-primary">Manchester City</h5>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>League Position:</span>
+                                    <strong>1st</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Home Record:</span>
+                                    <strong>12W-2D-1L</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Goals For/Against:</span>
+                                    <strong>68/23</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Recent Form:</span>
+                                    <strong class="text-success">W-W-W-W-D</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Win Streak:</span>
+                                    <strong class="text-success">4 games</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-warning">Brighton & Hove Albion</h5>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>League Position:</span>
+                                    <strong>9th</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Away Record:</span>
+                                    <strong>4W-5D-6L</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Goals For/Against:</span>
+                                    <strong>38/42</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Recent Form:</span>
+                                    <strong class="text-warning">W-L-D-W-L</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Upsets This Season:</span>
+                                    <strong class="text-info">3 vs Top 6</strong>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <!-- Player Statistics -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5 class="text-primary">Novak Djokovic</h5>
-                            <ul class="list-unstyled">
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Current Ranking:</span>
-                                    <strong>#1</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Hard Court W-L (2024):</span>
-                                    <strong>28-4</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Aces per Match:</span>
-                                    <strong>8.2</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>1st Serve %:</span>
-                                    <strong>64%</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Break Points Saved:</span>
-                                    <strong>67%</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Recent Form:</span>
-                                    <strong class="text-success">W-W-W-W-L</strong>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="text-warning">Rafael Nadal</h5>
-                            <ul class="list-unstyled">
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Current Ranking:</span>
-                                    <strong>#4</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Hard Court W-L (2024):</span>
-                                    <strong>18-8</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Aces per Match:</span>
-                                    <strong>6.8</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>1st Serve %:</span>
-                                    <strong>68%</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Break Points Saved:</span>
-                                    <strong>62%</strong>
-                                </li>
-                                <li class="d-flex justify-content-between mb-2">
-                                    <span>Recent Form:</span>
-                                    <strong class="text-warning">W-L-W-W-W</strong>
-                                </li>
-                            </ul>
+                    <div class="mt-4">
+                        <h6>Head-to-Head (Last 5 meetings)</h6>
+                        <div class="row text-center">
+                            <div class="col">
+                                <div class="badge bg-primary p-2">City 3-1</div>
+                                <small class="d-block">Apr 2024</small>
+                            </div>
+                            <div class="col">
+                                <div class="badge bg-primary p-2">City 4-0</div>
+                                <small class="d-block">Oct 2023</small>
+                            </div>
+                            <div class="col">
+                                <div class="badge bg-warning p-2">Brighton 1-0</div>
+                                <small class="d-block">May 2023</small>
+                            </div>
+                            <div class="col">
+                                <div class="badge bg-primary p-2">City 3-0</div>
+                                <small class="d-block">Jan 2023</small>
+                            </div>
+                            <div class="col">
+                                <div class="badge bg-secondary p-2">1-1 Draw</div>
+                                <small class="d-block">Aug 2022</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -478,17 +555,17 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
-                                        <strong>Novak Djokovic</strong>
+                                        <strong>Brighton & Hove Albion</strong>
                                         <br>
-                                        <small class="text-muted">Match Winner</small>
+                                        <small class="text-muted">Away Win</small>
                                     </div>
                                     <button class="btn btn-sm btn-outline-danger">
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="odds-value"><a href="home1.65.html" target="_blank" style="text-decoration: none; color: inherite"> 1.65</a></span>
-                                    <small class="text-muted">ATP Masters</small>
+                                    <span class="odds-value">5.00</span>
+                                    <small class="text-muted">Man City vs Brighton</small>
                                 </div>
                             </div>
                         </div>
@@ -510,6 +587,10 @@
                         </div>
                     </div>
                     
+                    <div class="alert alert-info p-2 mb-3">
+                        <small><i class="fas fa-info-circle me-1"></i>High odds = High risk, High reward!</small>
+                    </div>
+                    
                     <div class="d-grid">
                         <button class="btn btn-accent btn-lg">
                             <i class="fas fa-check me-2"></i>Place Bet
@@ -523,48 +604,64 @@
                         <i class="fas fa-info-circle me-2"></i>Match Info
                     </h5>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Tournament:</span>
-                        <span class="fw-bold">ATP Masters 1000</span>
+                        <span>Competition:</span>
+                        <span class="fw-bold">Premier League</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Surface:</span>
-                        <span class="fw-bold">Hard Court</span>
+                        <span>Venue:</span>
+                        <span class="fw-bold">Etihad Stadium</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Round:</span>
-                        <span class="fw-bold">Semi-Final</span>
+                        <span>Referee:</span>
+                        <span class="fw-bold">Anthony Taylor</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Best of:</span>
-                        <span class="fw-bold">3 Sets</span>
+                        <span>Weather:</span>
+                        <span class="fw-bold">Clear, 15°C</span>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <span>Prize Money:</span>
-                        <span class="fw-bold">$1.2M</span>
+                        <span>TV Coverage:</span>
+                        <span class="fw-bold">BT Sport</span>
                     </div>
                 </div>
 
-                <!-- Popular Bets -->
+                <!-- Underdog Betting Tips -->
                 <div class="card mt-4">
                     <div class="card-header">
-                        <i class="fas fa-fire me-2"></i>Popular Tennis Bets
+                        <i class="fas fa-lightbulb me-2"></i>Underdog Betting Tips
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Brighton has upset top teams before</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Counter-attacking style suits away games</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>City may rotate squad for upcoming fixtures</li>
+                            <li class="mb-2"><i class="fas fa-exclamation text-warning me-2"></i>High risk, but 5x return potential</li>
+                            <li><i class="fas fa-info text-info me-2"></i>Consider smaller stakes for value bets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Underdog Bets -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <i class="fas fa-fire me-2"></i>Popular Underdog Bets
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Djokovic & Over 21.5 Games</span>
-                            <span class="badge bg-primary rounded-pill">2.90</span>
+                            <span>Brighton Double Chance</span>
+                            <span class="badge bg-primary rounded-pill">2.80</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Djokovic 2-0 & Under 20.5</span>
-                            <span class="badge bg-primary rounded-pill">4.20</span>
+                            <span>Brighton +1.5 Goals</span>
+                            <span class="badge bg-primary rounded-pill">1.65</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Match to go 3 Sets</span>
-                            <span class="badge bg-primary rounded-pill">2.60</span>
+                            <span>Brighton to Score</span>
+                            <span class="badge bg-primary rounded-pill">2.20</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Both Players to Win a Set</span>
-                            <span class="badge bg-primary rounded-pill">2.40</span>
+                            <span>Brighton Win Either Half</span>
+                            <span class="badge bg-primary rounded-pill">3.20</span>
                         </li>
                     </ul>
                 </div>
@@ -640,7 +737,7 @@
         // Bet amount calculation
         document.getElementById('betAmount').addEventListener('input', function() {
             const betAmount = parseFloat(this.value) || 0;
-            const odds = 1.65;
+            const odds = 5.00;
             const potentialWin = (betAmount * odds - betAmount).toFixed(2);
             const totalReturn = (betAmount * odds).toFixed(2);
             
